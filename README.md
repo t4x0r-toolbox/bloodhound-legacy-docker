@@ -43,5 +43,7 @@ docker run -it \
 - **DB Password:** blood
 
 ## Documentation
+--- They have removed the documentation from bloodhound(dot)readthedocs(dot)io, it no longer works. If you find it a different place for it, please let me know and I'll add the link. ---
 
-[Official BloodHound Documentation](https://bloodhound.readthedocs.io/en/latest/index.html)
+
+Thanks FacundoIC for showing me this.
