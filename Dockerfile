@@ -1,4 +1,4 @@
-FROM debian:stable-slim
+FROM debian:buster
 LABEL org.opencontainers.image.authors="https://github.com/belane" \
       org.opencontainers.image.description="BloodHound Docker Ready to Use" \
       org.opencontainers.image.source="https://github.com/belane/docker-bloodhound" \
@@ -8,6 +8,9 @@ ARG neo4j=4.4.19
 ARG bloodhound=4.2.0
 
 # Base packages
+RUN sed -i 's|deb.debian.org/debian|archive.debian.org/debian|g' /etc/apt/sources.list && \
+    sed -i '/security.debian.org/d' /etc/apt/sources.list && \
+    echo 'Acquire::Check-Valid-Until "false";' > /etc/apt/apt.conf.d/99no-check-valid-until
 RUN apt-get update -qq &&\
     apt-get install --no-install-recommends -y -qq\
       wget \
