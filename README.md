@@ -25,6 +25,7 @@ docker build . -t bloodhound --build-arg neo4j=4.4.15 --build-arg bloodhound=4.2
 
 
 ### Run
+Warning: You may need to run `xhost +local:$(id -nu)` to allow the local user to access DISPLAY before running it.
 
 ```
 docker run -it \
