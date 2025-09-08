@@ -13,14 +13,16 @@ Clone this repo
 git clone https://github.com/t4x0r-toolbox/bloodhound-legacy-docker
 ```
 
-`docker build . -t bloodhound`
-
-### Optional Arguments
-
+### Recommended Arguments
+```
+docker build . -t bloodhound --build-arg neo4j=4.4.15 --build-arg bloodhound=4.2.0`
+```
 - **neo4j** version
 - **bloodhound** version
 
-`docker build . -t bloodhound --build-arg neo4j=4.4.15 --build-arg bloodhound=4.2.0`
+(you can also run it as)
+`docker build . -t bloodhound`
+
 
 ### Run
 
