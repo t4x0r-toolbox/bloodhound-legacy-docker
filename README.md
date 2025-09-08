@@ -8,7 +8,7 @@
 ## Build Image
 Clone this repo
 ```
-https://github.com/t4x0r-toolbox/bloodhound-legacy-docker
+git clone https://github.com/t4x0r-toolbox/bloodhound-legacy-docker
 ```
 
 `docker build . -t bloodhound`
